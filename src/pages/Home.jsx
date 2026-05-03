@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../api/config';
 import Hero from '../components/Hero';
 import ProductCard from '../components/ProductCard';
 import { motion } from 'framer-motion';
@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products/featured');
+        const res = await api.get('/products/featured');
         setProducts(res.data);
       } catch (err) {
         console.error("Error fetching products", err);

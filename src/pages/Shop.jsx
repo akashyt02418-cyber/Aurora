@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api/config';
 import ProductCard from '../components/ProductCard';
 import { motion } from 'framer-motion';
 import './Shop.css';
@@ -13,7 +13,7 @@ const Shop = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products');
+        const res = await api.get('/products');
         setProducts(res.data);
       } catch (err) {
         console.error("Error fetching products", err);
