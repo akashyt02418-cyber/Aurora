@@ -1,0 +1,43 @@
+.shop-page {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.shop-header {
+  margin-bottom: 5rem;
+}
+
+.shop-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 2rem;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+}
+
+.category-btn {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.category-btn.active {
+  color: var(--accent-primary);
+}
+
+.category-btn:hover {
+  color: white;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-cols: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 4rem 2rem;
+}
